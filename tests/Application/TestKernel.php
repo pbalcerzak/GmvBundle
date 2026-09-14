@@ -101,7 +101,6 @@ final class TestKernel extends Kernel
             new SyliusCoreBundle(),
             new SyliusResourceBundle(),
             new SyliusGridBundle(),
-            new KnpGaufretteBundle(),
             new LiipImagineBundle(),
             new BabDevPagerfantaBundle(),
             new WebpackEncoreBundle(),
@@ -125,6 +124,10 @@ final class TestKernel extends Kernel
 
         if (SyliusCoreBundle::VERSION_ID >= '20000') {
             $bundles[] = new TwigComponentBundle();
+        }
+
+        if (class_exists(KnpGaufretteBundle::class)) {
+            $bundles[] = new KnpGaufretteBundle();
         }
 
         return $bundles;
