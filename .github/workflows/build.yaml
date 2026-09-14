@@ -72,7 +72,7 @@ jobs:
             -
                 name: Restrict Sylius version
                 if: matrix.sylius != ''
-                run: composer require "sylius/sylius:${{ matrix.sylius }}" --no-update --no-scripts --no-interaction
+                run: composer require "sylius/sylius:${{ matrix.sylius }}" --no-update --no-scripts --no-interaction --dev
 
             -
                 name: Install PHP dependencies
