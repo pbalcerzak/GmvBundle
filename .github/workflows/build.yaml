@@ -28,7 +28,7 @@ jobs:
                     -
                         php: "8.4"
                         symfony: "^8.0"
-                        sylius: "~2.3.0"
+                        sylius: "v2.3.0-alpha.1"
 
         env:
             APP_ENV: test
